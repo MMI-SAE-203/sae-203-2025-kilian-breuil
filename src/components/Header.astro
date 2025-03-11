@@ -1,9 +1,9 @@
 ---
-import Logo from '../assets/icons/IconLogo.svg'
+import Logo from '../../src/assets/logosite.svg';
 import Button from '../components/Button.astro';
 const currentPath = Astro.url.pathname;
 ---
-<header class="flex items-center justify-between px-4 gap-8 border-b-2 border-b-indigo-100 h-20">
+<header class="flex items-center justify-between px-4 gap-8 border-b-2 border-b-indigo-100 h-20 bg-[#345337]">
   <a href="/">
     <Logo />
   </a>
@@ -19,25 +19,25 @@ const currentPath = Astro.url.pathname;
   </button>
   <nav
     id="menu"
-    class="flex-1 px-6 py-12 flex justify-between mt-20 flex-col fixed z-10 inset-0 bg-indigo-50 visible opacity-100 max-lg:aria-hidden:invisible max-lg:aria-hidden:opacity-0 lg:mt-0 lg:flex-row lg:static lg:bg-transparent lg:py-6 lg:visible lg:opacity-100"
+    class="flex-1 px-6 py-12 flex justify-between mt-20 flex-col fixed z-10 inset-0 bg-[#345337] visible opacity-100 max-lg:aria-hidden:invisible max-lg:aria-hidden:opacity-0 lg:mt-0 lg:flex-row lg:static lg:bg-transparent lg:py-6 lg:visible lg:opacity-100"
     aria-hidden="true"
   >
     <ul class="flex flex-col gap-4 lg:flex-row">
       <li>
-        <a class={`block p-4 rounded-lg text-gray-500 ${currentPath === '/properties' ? 'text-indigo-600 font-bold max-lg:bg-indigo-100 max-lg:rounded-lg' : ''}`} 
-        href="/properties">Rent</a>
+        <a class={`block p-4 rounded-lg text-white ${currentPath === '/properties' ? 'text-indigo-600 font-bold max-lg:bg-indigo-100 max-lg:rounded-lg' : ''}`} 
+        href="/Programme acitivité">Programme acitivité</a>
       </li>
       <li>
-        <a class="block p-4 rounded-lg text-gray-500" href="/buy">Buy</a>
+        <a class="block p-4 rounded-lg text-white" href="/Programme films">Programme films</a>
       </li>
       <li>
-        <a class="block p-4 rounded-lg text-gray-500" href="/sell">Sell</a>
+        <a class="block p-4 rounded-lg text-white" href="/Invité">Invité</a>
       </li>
       <li>
-        <a class="block p-4 rounded-lg text-gray-500" href="/manage">Manage property</a>
+        <a class="block p-4 rounded-lg text-white" href="/Infos pratique">Infos pratique</a>
       </li>
       <li>
-        <a class="block p-4 rounded-lg text-gray-500" href="/resources">Resources</a>
+        <a class="block p-4 rounded-lg text-white" href="/À propos">À propos</a>
       </li>
     </ul>
     <div class="flex items-center justify-center gap-4 px-4">

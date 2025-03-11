@@ -4,8 +4,8 @@
 
 @layer base {
   body {
-    @apply font-sans text-base leading-normal;
-  }
+    @apply  text-base leading-normal;
+  } 
   h1 {
     @apply leading-tight text-2xl lg:text-4xl;
   }
