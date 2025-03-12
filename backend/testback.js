@@ -1,11 +1,14 @@
-import { allFilmsSorted, allActivitiesSorted, AllInvite, oneID, oneIDActivite, oneIDInvite,
-    allActiviteByInvite, allActiviteByName, addNewFilm, addNewInvite, addNewActivite, updateFilmById, updateInviteById, updateActiviteById,} from './backend.mjs' ;
+import { getfilm, 
+    
+    //allActivitiesSorted, oneID, oneIDActivite, oneIDInvite,
+   // allActiviteByInvite, allActiviteByName, addNewFilm, addNewInvite, addNewActivite, updateFilmById, updateInviteById, updateActiviteById,
+   } from './backend.mjs' ;
 
-/*try { const date = await allFilmsSorted();   
+try { const date = await getfilm();   
     console.log(date); 
     } catch (e) { 
         console.error(e); 
-    }*/
+    }
 
     /*try { const date = await allActivitiesSorted();   
         console.log(date); 
