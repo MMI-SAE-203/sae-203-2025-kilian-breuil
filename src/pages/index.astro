@@ -1,13 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { getHouses } from '../js/backend.mjs';
-const houses = await getHouses();
 import { Image } from 'astro:assets';
 import imageprogramme from '../assets/img/image 7.png';
 import imagebilleterie from '../assets/img/image 6.png';
 import imageinvite from '../assets/img/image 32.png';
 import imageactivite from '../assets/img/image 33-1.png';
 import imagepratique from '../assets/img/image 10.png';
+import teisseire from '../assets/img/image 23.png';
+import ecoprod from '../assets/img/image 24.png';
+import sncf from '../assets/img/image 25.png';
+import region from '../assets/img/image 26.png';
+import universite from '../assets/img/image 27.png';
+import pass from '../assets/img/image 28.png';
 ---
 
 <Layout>
@@ -46,5 +50,20 @@ import imagepratique from '../assets/img/image 10.png';
           </div>
       </div>
   </div>
-  
+    <h3 class="pl-10 mt-10">Partenaires</h3>
+    <div class="flex items-center justify-center space-x-10 mt-10">
+      <Image src={teisseire} alt="teisseire"/>
+      <Image src={ecoprod} alt="ecoprod"/>
+    </div>
+    <div class="flex items-center justify-center space-x-10 mt-10">
+      <Image src={sncf} alt="sncf"/>
+    </div>
+    <h3 class="pl-10 mt-10">Partenaires institutionnels</h3>
+    <div class="flex items-center justify-center space-x-10 mt-10">
+      <Image src={region} alt="region"/>
+      <Image src={universite} alt="universite"/>
+    </div>
+    <div class="flex items-center justify-center space-x-10 mt-10 pb-10">
+      <Image src={pass} alt="pass"/>
+    </div>
 </Layout>

@@ -1,10 +1,10 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { oneHouse } from '../../js/backend.mjs'
+import { oneID} from '../../../backend/backend.mjs'
 import { Picture } from 'astro:assets';
 const { id } = Astro.params;
-const house = await oneHouse(id) ;
-console.log(house);
+const record = await oneID(id);
+console.log(record);
 import Button from '../../components/Button.astro';
 import IconShare from '../../assets/icons/IconShare.svg';
 import IconLove from '../../assets/icons/IconLove.svg';
@@ -19,7 +19,7 @@ import IconLove from '../../assets/icons/IconLove.svg';
         <Button variant="outlined" url="/login" text="Favorite"><IconLove class="w-5 stroke-infigo-500"/></Button>
     </div>
     <div class="col-span-3 grid grid-cols-2 max-h-[500px] grid-rows-2 grid-flow-dense gap-8 lg:grid-cols-subgrid">
-        {house.imageUrlsFull.map((imgUrl, index) => (
+        {record.imageUrlsFull.map((imgUrl, index) => (
             <Picture pictureAttributes={{class:"rounded-lg overflow-hidden first:col-span-2 first:lg:row-span-2"}} key="{index}" class={`w-full h-full object-cover`} inferSize="true" src={imgUrl} alt={`House image ${index + 1}`}/>
         ))}
     </div>
