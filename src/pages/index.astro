@@ -2,15 +2,49 @@
 import Layout from '../layouts/Layout.astro';
 import { getHouses } from '../js/backend.mjs';
 const houses = await getHouses();
-
+import { Image } from 'astro:assets';
+import imageprogramme from '../assets/img/image 7.png';
+import imagebilleterie from '../assets/img/image 6.png';
+import imageinvite from '../assets/img/image 32.png';
+import imageactivite from '../assets/img/image 33-1.png';
+import imagepratique from '../assets/img/image 10.png';
 ---
 
 <Layout>
-	<div class="bg-[#D8FFC0]">
-    <div class="container py-20 space-y-8">
-      <img src="/src/assets/img/image 4.png" alt=""> 
-      <h2 class="absolute top-1/2">Home page</h2>
-
+    <div class=" relative">
+      <img src="/src/assets/img/image 4.png" alt="infos du festival" class="w-full h-full"/>
+      <div class="absolute top-0 flex flex-col items-center justify-center w-full h-full text-white text-center">
+      <h2>5-8 juillet 2025</h2>
+      <h2>7rue du Malsaucy</h2>
+      <h2>90300</h2>
+      </div>
     </div>
+    <div class="text-center mt-10">
+      <p>Plongez dans l'univers captivant du cinéma indépendant et découvrez des talents prometteurs du monde entier. Notre festival célèbre la créativité, l'innovation et la diversité à travers une sélection éclectique de films qui repoussent les limites de l'art cinématographique.</p>
+    </div>
+    <div class=" flex items-center justify-center mt-28">
+      <div class=" overflow-x-auto flex space-x-4 snap-x snap-mandatory">
+          <div class="min-w-full flex-shrink-0 snap-center relative ">
+            <Image class=" w-full h-full" src={imageprogramme} alt="" />
+            <a href=""><h3 class="absolute top-1/2 text-white ml-36">Programmation</h3></a>
+          </div>
+          <div class="min-w-full flex-shrink-0 snap-center relative ">
+            <Image class="w-full h-full" src={imagepratique} alt=""/>
+            <a href=""><h3 class="absolute top-1/2 text-white ml-36" >Infos pratiques</h3></a>
+          </div>
+          <div class="min-w-full flex-shrink-0 snap-center relative ">
+            <Image class="w-full h-full " src={imagebilleterie} alt=""/>
+            <a href="/info"><h3 class="absolute top-1/2 text-white ml-36">Billeterie</h3></a>
+          </div>
+          <div class="min-w-full flex-shrink-0 snap-center relative ">
+            <Image class="w-full h-full" src={imageinvite} alt=""/>
+           <a href=""> <h3 class="absolute top-1/2 text-white ml-40">Invités</h3></a>
+          </div>
+          <div class="min-w-full flex-shrink-0 snap-center relative ">
+            <Image class="w-full h-full" src={imageactivite} alt=""/>
+           <a href=""> <h3 class="absolute top-1/2 text-white ml-36">Activités</h3></a>
+          </div>
+      </div>
   </div>
+  
 </Layout>
