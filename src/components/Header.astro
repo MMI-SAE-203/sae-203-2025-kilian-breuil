@@ -1,6 +1,5 @@
 ---
 import Logo from '../../src/assets/logosite.svg';
-import Button from '../components/Button.astro';
 const currentPath = Astro.url.pathname;
 ---
 <header class="flex items-center justify-between px-4 gap-8 border-b-2 border-b-indigo-100 h-20 bg-[#345337]">
@@ -43,8 +42,6 @@ const currentPath = Astro.url.pathname;
       </li>
     </ul>
     <div class="flex items-center justify-center gap-4 px-4">
-      <Button variant="outlined" url="/login" text="Login" />
-      <Button variant="dark" url="/signup" text="Sign Up" />
     </div>
   </nav>
 </header>
