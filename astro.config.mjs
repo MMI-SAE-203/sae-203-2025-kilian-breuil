@@ -12,5 +12,6 @@ export default defineConfig({
   integrations: [alpinejs(), tailwind({ applyBaseStyles: false })],
   experimental: {
     svg:true
-  }
+  },
+  output: 'server'
 });

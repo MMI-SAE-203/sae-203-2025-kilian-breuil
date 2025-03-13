@@ -3,7 +3,6 @@ import Layout from '../../layouts/Layout.astro';
 import Card from '../../components/Card.astro';
 import { getfilm } from '../../../backend/backend.mjs';
 const films = await getfilm();
-import Id from './[id].astro';
 ---
 
 <Layout>
@@ -18,7 +17,7 @@ import Id from './[id].astro';
             <Card {...film} />
           ))
         ) : (
-          <p>Aucune film trouvée.</p>
+          <p>Aucun film trouvé.</p>
         )}
       </div>
     </div>

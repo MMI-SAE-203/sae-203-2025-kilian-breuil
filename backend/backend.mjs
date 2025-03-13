@@ -17,7 +17,7 @@ export async function getinvite() {
 }
 
 export async function oneID(id) {
-    const oneRecord = await pb.collection('film').getOne(id);
+    const oneRecord = await pb.collection('film').getOne(id, { expand: 'invite' });
     return oneRecord;
 }
 
