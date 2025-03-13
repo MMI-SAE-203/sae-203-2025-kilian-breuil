@@ -1,0 +1,34 @@
+---
+import ImgPb from './ImgPb.astro'
+import { formatDate } from '../../helpers';
+
+
+const { ...activite } = Astro.props;
+
+---
+
+<article>
+    <a href={`/programmeactivite/${activite.id}`}>
+      <ImgPb 
+      record={activite}
+      field="image_activite"
+      alt={activite.titre}
+      classPicture="col-span-1 row span-3 flex items-center justify-center"
+      classImg="object-cover"/>
+    </a>
+    <div
+      class="relative px-6 py-4 space-y-2"
+    >
+      <p class=" font-semibold py-2 flex justify-center items-center">
+        <a class="text-black" href={`/Programmefilm/${activite.id}`}>{activite.nom_activite}</a>
+      </p>
+      <p class="text-black flex justify-center items-center">
+        <span class=" font-bold ">{formatDate(activite.date)}</span
+        >
+      </p>
+
+
+
+    </div>
+
+  </article>

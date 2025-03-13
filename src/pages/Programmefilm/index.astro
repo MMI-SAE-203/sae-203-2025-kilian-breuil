@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import Card from '../../components/Card.astro';
+import Cardfilm from '../../components/Cardfilm.astro';
 import { getfilm } from '../../../backend/backend.mjs';
 const films = await getfilm();
 ---
@@ -14,7 +14,7 @@ const films = await getfilm();
       <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
         {films.length > 0 ? (
           films.map((film) => (
-            <Card {...film} />
+            <Cardfilm {...film} />
           ))
         ) : (
           <p>Aucun film trouvé.</p>

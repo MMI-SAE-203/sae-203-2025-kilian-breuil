@@ -1,0 +1,29 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { oneID, oneIDActivite} from '../../../backend/backend.mjs'
+const { id } = Astro.params;
+const oneRecord = await oneIDActivite(id);
+console.log(oneRecord);
+import ImgPb from '../../components/ImgPb.astro';
+const { ...activite } = oneRecord;
+---
+
+<Layout>
+    <div>
+        <a href="./"> <p class=" font-bold py-5 ml-5">Retour sur le programme</p>
+     <div/>
+    <ImgPb 
+    record={activite}
+    field="image_activite"
+    alt={activite.nom_activite}
+    classPicture="col-span-1 row span-3 flex items-center justify-center "
+    classImg="object-cover"/>
+    <p class=" font-semibold py-2 flex justify-center items-center">
+        <a class="text-black" href={`/programmeactivite/${activite.id}`}>{activite.nom_activite}</a>
+      </p>
+      <p class=" font-semibold py-2 ml-5">
+        <a class="text-black" href={`/programmeactivite/${activite.id}`}>{activite.image_activite}</a>
+          <p class="ml-5">invité :<a href={ `/invite/${activite.expand?.animateur.id}` }>{activite.expand?.animateur.nom} {activite.expand?.animateur.prenom}</a></p>
+      </p>
+
+</Layout>

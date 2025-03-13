@@ -22,12 +22,12 @@ export async function oneID(id) {
 }
 
 export async function oneIDActivite(id) {
-    const oneRecord = await pb.collection('activite').getOne(id);
+    const oneRecord = await pb.collection('activite').getOne(id, { expand: 'animateur' });
     return oneRecord;
 }
 
 export async function oneIDInvite(id) {
-    const oneRecord = await pb.collection('invite').getOne(id);
+    const oneRecord = await pb.collection('invite').getOne(id, { expand: 'film' });
     return oneRecord;
 }
 
