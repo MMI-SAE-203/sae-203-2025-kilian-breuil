@@ -16,5 +16,10 @@ export default defineConfig({
   },
 
   output: 'server',
-  adapter: netlify()
+    adapter: netlify({
+      imageCDN: false,
+    }),
+    image: {
+      domains: ['192.168.0.117'],
+    },
 });
