@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import {Image} from 'astro:assets'
+import map from "../../assets/img/image 11.png";
+import campanile from "../../assets/img/image 29.png"; 
+import hotelwestern from "../../assets/img/image 30.png";
+import kyriad from "../../assets/img/image 31.png";
+---
+
+<Layout>
+    <h2 class="flex justify-center">Infos pratiques</h2>
+    <div class="flex items-center justify-center mt-5 pb-2">
+    <Image  src={map} alt="map de l'endroit"/>
+    </div>
+    <div class="ml-8">
+    <p>Lac du Malsaucy </p>
+        <p>7 rue du Malsaucy </p>
+        <p>90300 Sermamagny</p>
+    </div>
+    <div class="mb-5">
+    <h4 class="ml-10 underline mt-4">Horraires :</h4>
+    <div class="ml-8">
+        <p>Le festival Cinénature ce passera aux horaires suivantes</p>
+        <p>Samedi 10h 23h</p>
+        <p>Dimanche et Lundi 10h 21h</p>
+    </div>
+    </div>
+    <div class="mb-5">
+    <h4 class="ml-10 underline">Tarifs :</h4>
+    <div class="ml-8">
+        <p>Pass 1 jour : 55 euros</p>
+        <p>Pass 2 jours : 80 euros</p>
+        <p>Pass complet : 95 euros</p>
+    </div>
+    </div>
+    <h3 class="ml-10 mb-5">Hébergement</h3>
+    <div class="ml-10">
+    <Image src={campanile} alt="campanile"/>
+    </div>
+    <div class="ml-8">
+    <p>Campanile Belfort-Montbéliard***</p>
+    <p>La Jonxion</p>
+    <p>Avenue de la Gare TGV</p>
+    <p>90400 Meroux</p>
+    <p>03 84 19 08 97</p>
+    </div>
+    <div class="ml-10">
+    <Image src={hotelwestern} alt="western"/>
+    </div>
+    </div>
+    <div class="ml-8">
+    <p>HOTEL BEST WESTERN</p>
+    <p>9 avenue wilson</p>
+    <p>90000 Belfort</p>
+    <p>03 84 21 59 45</p>
+    </div>
+    <div class="ml-10">
+    <Image src={kyriad} alt="kyriad"/>
+    </div>
+    </div>
+    <div class="ml-8">
+    <p></p>
+    <p>HOTEL KYRIAD</p>
+    <p>55 Bis Fbg de Montbéliard</p>
+    <p>90000 Belfort</p>
+    <p>03 84 22 46 76</p>
+    </div>
+    <h3 class="ml-10 mb-5 mt-2">Comment venir</h3>
+    <p class="ml-8 pb-5">Le festival Cinénature se déroule sur la presqu’île du Malsaucy, un site protégé situé à 7 km de Belfort. Afin de limiter les impacts environnementaux et réduire le temps de venue sur le site, le festival développe un dispositif de navettes train et bus gratuits entre la gare TGV Belfort-Montbéliard, la gare Belfort-Ville, le camping et le site du festival. Cinénature encouragent et recommandent d’utiliser des moyens de transport alternatifs à la voiture, tels que le vélo ou les transports en commun.</p>
+
+
+</Layout>
