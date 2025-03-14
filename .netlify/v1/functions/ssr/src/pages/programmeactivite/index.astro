@@ -1,0 +1,25 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Cardactivite from '../../components/Cardactivite.astro';
+import { getactivite } from '../../../backend/backend.mjs';
+const activites = await getactivite();
+---
+
+<Layout>
+
+    
+    <div class="container py-20 space-y-8">
+      <h2>Programmes activité</h2>
+
+      <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+        {activites.length > 0 ? (
+          activites.map((activite) => (
+            <Cardactivite {...activite} />
+          ))
+        ) : (
+          <p>Aucune activitée trouvée.</p>
+        )}
+      </div>
+    </div>
+  
+</Layout>

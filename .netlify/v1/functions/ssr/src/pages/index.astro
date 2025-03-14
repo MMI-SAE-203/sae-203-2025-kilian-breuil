@@ -1,0 +1,69 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import imageprogramme from '../assets/img/image 7.png';
+import imagebilleterie from '../assets/img/image 6.png';
+import imageinvite from '../assets/img/image 32.png';
+import imageactivite from '../assets/img/image 33-1.png';
+import imagepratique from '../assets/img/image 10.png';
+import teisseire from '../assets/img/image 23.png';
+import ecoprod from '../assets/img/image 24.png';
+import sncf from '../assets/img/image 25.png';
+import region from '../assets/img/image 26.png';
+import universite from '../assets/img/image 27.png';
+import pass from '../assets/img/image 28.png';
+---
+
+<Layout>
+    <div class=" relative">
+      <img src="/src/assets/img/image 4.png" alt="infos du festival" class="w-full h-full"/>
+      <div class="absolute top-0 flex flex-col items-center justify-center w-full h-full text-white text-center">
+      <h2>5-8 juillet 2025</h2>
+      <h2>7rue du Malsaucy</h2>
+      <h2>90300</h2>
+      </div>
+    </div>
+    <div class="text-center mt-10">
+      <p>Plongez dans l'univers captivant du cinéma indépendant et découvrez des talents prometteurs du monde entier. Notre festival célèbre la créativité, l'innovation et la diversité à travers une sélection éclectique de films qui repoussent les limites de l'art cinématographique.</p>
+    </div>
+    <div class=" flex items-center justify-center mt-28">
+      <div class=" overflow-x-auto flex space-x-4 snap-x snap-mandatory">
+          <div class="min-w-full flex-shrink-0 snap-center relative ">
+            <Image class=" w-full h-full" src={imageprogramme} alt="" />
+            <a href="/Programmefilm"><h3 class="absolute top-1/2 text-white ml-36">Films</h3></a>
+          </div>
+          <div class="min-w-full flex-shrink-0 snap-center relative ">
+            <Image class="w-full h-full" src={imagepratique} alt=""/>
+            <a href="/infospratique"><h3 class="absolute top-1/2 text-white ml-36" >Infos pratiques</h3></a>
+          </div>
+          <div class="min-w-full flex-shrink-0 snap-center relative ">
+            <Image class="w-full h-full " src={imagebilleterie} alt=""/>
+            <a href="/billeterie"><h3 class="absolute top-1/2 text-white ml-36">Billeterie</h3></a>
+          </div>
+          <div class="min-w-full flex-shrink-0 snap-center relative ">
+            <Image class="w-full h-full" src={imageinvite} alt=""/>
+           <a href="invite"> <h3 class="absolute top-1/2 text-white ml-40">Invités</h3></a>
+          </div>
+          <div class="min-w-full flex-shrink-0 snap-center relative ">
+            <Image class="w-full h-full" src={imageactivite} alt=""/>
+           <a href="programmeactivite"> <h3 class="absolute top-1/2 text-white ml-36">Activités</h3></a>
+          </div>
+      </div>
+  </div>
+    <h3 class="pl-10 mt-10">Partenaires</h3>
+    <div class="flex items-center justify-center space-x-10 mt-10">
+      <Image src={teisseire} alt="teisseire"/>
+      <Image src={ecoprod} alt="ecoprod"/>
+    </div>
+    <div class="flex items-center justify-center space-x-10 mt-10">
+      <Image src={sncf} alt="sncf"/>
+    </div>
+    <h3 class="pl-10 mt-10">Partenaires institutionnels</h3>
+    <div class="flex items-center justify-center space-x-10 mt-10">
+      <Image src={region} alt="region"/>
+      <Image src={universite} alt="universite"/>
+    </div>
+    <div class="flex items-center justify-center space-x-10 mt-10 pb-10">
+      <Image src={pass} alt="pass"/>
+    </div>
+</Layout>

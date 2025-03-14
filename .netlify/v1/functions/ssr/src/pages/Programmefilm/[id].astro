@@ -1,0 +1,34 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { oneID} from '../../../backend/backend.mjs'
+const { id } = Astro.params;
+const oneRecord = await oneID(id);
+import ImgPb from '../../components/ImgPb.astro';
+const { ...film } = oneRecord;
+---
+
+<Layout>
+    <div>
+        <a href="./"> <p class=" font-bold py-5 ml-5">Retour sur le programme</p>
+     <div/>
+    <ImgPb 
+    record={film}
+    field="affiche"
+    alt={film.titre}
+    classPicture="col-span-1 row span-3 flex items-center justify-center "
+    classImg="object-cover"/>
+    <p class=" font-semibold py-2 flex justify-center items-center">
+        <a class="text-black" href={`/Programmefilm/${film.id}`}>{film.nom_film}</a>
+      </p>
+      <p class=" font-semibold py-2 ml-5">
+        <a class="text-black" href={`/Programmefilm/${film.id}`}>{film.synopsis}</a>
+        <p class=" font-semibold py-2 ml-5">
+            <a class="text-black" href={`/Programmefilm/${film.id}`}>{film.infos}</a>
+          </p>
+          <p class="ml-5">invité :<a href={ `/invite/${film.expand?.invite.id}` }>{film.expand?.invite.nom_invite} {film.expand?.invite.prenom_invite}</a></p>
+              <p class="text-black pb-4 ml-5">
+        { film.ba}
+      </p>
+      </p>
+
+</Layout>
